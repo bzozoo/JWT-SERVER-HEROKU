@@ -1,6 +1,6 @@
 const http = require('http');
 
-const hostname = 'jwt-backend.herokuapp.com';
+const hostname = 'localhost';
 const port = process.env.PORT || 1337;
 
 const server = http.createServer((req, res) => {
