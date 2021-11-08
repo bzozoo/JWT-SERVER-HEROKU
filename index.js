@@ -1,14 +1,19 @@
-const https = require('https');
+const http = require('http');
 
-const hostname = 'jwt-backend.herokuapp.com';
-const port = process.env.PORT || 1337;
+const port = process.env.PORT || 3000
 
 const server = http.createServer((req, res) => {
+
   res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
+
+  res.setHeader('Content-Type', 'text/html');
+
+  res.end('<h1>Hello World</h1>');
+
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at https://${hostname}:${port}/`);
+server.listen(port,() => {
+
+  console.log(`Server running at port `+port);
+
 });
